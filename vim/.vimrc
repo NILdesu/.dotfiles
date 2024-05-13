@@ -25,10 +25,10 @@ set showmatch     " highlight matching braces
 set wildmenu      " command line tab completion
 set ruler         " shows the current line number at the bottom-right
 set autoread      " reload files that have been edited outside of vim
-set laststatus=2  " always show status line
-set mouse=a       " enable mouse use in all modes
 set foldenable    " enable folding
+set laststatus=2  " always show status line
 set scrolloff=1   " always show 1 line above/below cursor
+set mouse=a       " enable mouse use in all modes
 
 " Make the escape key more responsive by decreasing the wait time for an
 " escape sequence (e.g., arrow keys).
@@ -77,7 +77,7 @@ set listchars=tab:,.,trail:.,extends:#,nbsp:.
 "}}}
 " Keybinds {{{
 " Set Leader to space
-nmap <Space> <Leader>
+map <Space> <Leader>
 
 " Leader y,d,p copies and pastes to clipboard
 vmap <Leader>y "+y
