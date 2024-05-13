@@ -4,15 +4,6 @@ if &compatible
   set nocompatible
 endif
 
-" Enabling filetype support provides filetype-specific indenting,
-" syntax highlighting, omni-completion and other useful settings.
-filetype plugin indent on
-syntax on
-
-" 'matchit.vim' is built-in so let's enable it!
-" Hit '%' on 'if' ot jump to 'else'.
-runtime macros/matchit.vim
-
 " Folding begins here, press 'za' to open and close folds
 " Core settings {{{
 set termguicolors " true color terminal
@@ -74,6 +65,10 @@ set incsearch  " search as you type
 " Set how whitespace is displayed
 set list
 set listchars=tab:,.,trail:.,extends:#,nbsp:.
+
+" 'matchit.vim' is built-in so let's enable it!
+" Hit '%' on 'if' ot jump to 'else'.
+runtime macros/matchit.vim
 "}}}
 " Keybinds {{{
 " Set Leader to space
@@ -138,6 +133,8 @@ Plug 'rafi/awesome-vim-colorschemes'
 Plug 'dense-analysis/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
+" Initialize plugin system
+" - Automatically executes `filetype plugin indent on` and `syntax enable`.
 call plug#end()
 
 set omnifunc=ale#completion#OmniFunc
