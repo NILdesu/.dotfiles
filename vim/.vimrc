@@ -17,9 +17,25 @@ set wildmenu      " command line tab completion
 set ruler         " shows the current line number at the bottom-right
 set autoread      " reload files that have been edited outside of vim
 set foldenable    " enable folding
+set nobackup      " disable backups
 set laststatus=2  " always show status line
 set scrolloff=1   " always show 1 line above/below cursor
 set mouse=a       " enable mouse use in all modes
+
+" Tabs to spaces
+set expandtab     " expand tabs to spaces
+set tabstop=2     " set tabs to 2 spaces
+set softtabstop=2 " tab/backspace will insert/delete 2 spaces
+set shiftwidth=2  " set autoindent width
+
+" Searching
+set hlsearch   " highlight search terms
+set ignorecase " case insensitive search
+set smartcase  " switch to case sensitive if capitals used
+set incsearch  " search as you type
+
+" Intuitive backspace behavior
+set backspace=indent,eol,start
 
 " Make the escape key more responsive by decreasing the wait time for an
 " escape sequence (e.g., arrow keys).
@@ -33,34 +49,20 @@ if empty(glob($HOME . '/.vim/swap'))
   call mkdir($HOME . "/.vim/swap", "p", 0700)
 endif
 
-set directory=$HOME/.vim/swap  " Set swap directory
+" Set swap directory
+set directory=$HOME/.vim/swap
 
-" Intuitive backspace behavior
-set backspace=indent,eol,start
-
-" Tabs to spaces
-set expandtab     " expand tabs to spaces
-set tabstop=2     " set tabs to 2 spaces
-set softtabstop=2 " tab/backspace will insert/delete 2 spaces
-set shiftwidth=2  " set autoindent width
-
-" Persistent undo
 " Create undo directory if it does not exist
 if empty(glob($HOME . '/.vim/undo'))
   call mkdir($HOME . "/.vim/undo", "p", 0700)
 endif
 
+" Persistent undo
 set undofile
 set undodir=$HOME/.vim/undo
 
 set undolevels=1000
 set undoreload=10000
-
-" Searching
-set hlsearch   " highlight search terms
-set ignorecase " case insensitive search
-set smartcase  " switch to case sensitive if capitals used
-set incsearch  " search as you type
 
 " Set how whitespace is displayed
 set list
