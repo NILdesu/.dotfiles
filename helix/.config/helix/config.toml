@@ -1,0 +1,25 @@
+theme = "catppuccin_mocha"
+
+[editor]
+cursorline = true
+color-modes = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline" 
+
+[editor.statusline]
+left = ["mode", "spinner", "read-only-indicator", "file-name", "file-modification-indicator"]
+right = ["version-control", "spacer", "diagnostics", "selections", "register", "position", "file-encoding", "file-line-ending", "file-type"]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.indent-guides]
+render = true
+
+[keys.normal]
+Z = { Z = ":write-quit" }
+'{' = "goto_prev_paragraph"
+'}' = "goto_next_paragraph"
